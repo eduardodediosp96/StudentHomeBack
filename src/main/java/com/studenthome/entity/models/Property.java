@@ -20,6 +20,8 @@ private static final long serialVersionUID = 1L;
 	private Double size;
 	private Double cost;
 	private boolean active;
+	private	String description;
+	private String imageurl;
 
 	public long getId()  {
 		return id;
@@ -31,9 +33,7 @@ private static final long serialVersionUID = 1L;
 	public void setnRoom(int nRoom) {
 		this.nRoom = nRoom;
 	}
-	public Double getSize() {
-		return size;
-	}
+	public Double getSize() {return size;}
 	public void setSize(Double size) {
 		this.size = size;
 	}
@@ -45,6 +45,11 @@ private static final long serialVersionUID = 1L;
 	}
 	public boolean getActive() {return active;}
 	public void setActive(boolean active) {this.active = active; }
+	public String getDescription() {return description;}
+	public void setDescription(String description) {this.description = description; }
+	public String getImageurl() {return imageurl;}
+	public void setImageurl(String imageurl) {this.imageurl = imageurl; }
+
 
 	/*
 	public long getSuscriptionId() {
