@@ -33,7 +33,7 @@ public class studentController{
 		return service.listId(id);
 	}
 	
-	@PostMapping("/student")
+	@PostMapping("/student/")
 	public void add(Student s) {
 		service.post(s);
 	}
