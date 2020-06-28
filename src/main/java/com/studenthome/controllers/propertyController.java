@@ -1,18 +1,13 @@
 package com.studenthome.controllers;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.studenthome.entity.models.Bicycle;
 import com.studenthome.entity.models.Property;
-import com.studenthome.entity.services.IBicycleService;
 import com.studenthome.entity.services.IPropertyService;
 
 @RestController
@@ -25,7 +20,7 @@ public class propertyController{
 	com.studenthome.entity.services.IStudentService serv;
 	
 	@GetMapping("property/list")
-	public List<Property> getAllBicycles(){
+	public List<Property> getAllPropertys(){
 		return service.list();
 	}
 	

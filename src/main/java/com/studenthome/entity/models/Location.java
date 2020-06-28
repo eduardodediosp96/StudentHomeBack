@@ -8,15 +8,16 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name="suscription")
-public class Suscription implements Serializable {
+@Table(name="location")
+public class Location implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private Double price;
-    private String description;
+    private String distric;
+    private String address;
+    private String province;
 
     public long getId()  {
         return id;
@@ -30,17 +31,23 @@ public class Suscription implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public Double getPrice() {
-        return price;
+    public String getDistric() {
+        return distric;
     }
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setDistric(String distric) {
+        this.distric = distric;
     }
-    public String getDescription() {
-        return description;
+    public String getAddress() {
+        return address;
     }
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getProvince() {
+        return province;
+    }
+    public void setProvince(String province) {
+        this.province = province;
     }
 
 }

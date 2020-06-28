@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.studenthome.entity.models.Property;
 import com.studenthome.entity.models.Student;
-import com.studenthome.entity.services.IPropertyService;
 import com.studenthome.entity.services.IStudentService;
 
 @RestController
@@ -19,15 +16,12 @@ public class studentController{
 	
 	@Autowired
 	IStudentService service;
-	
 
-	
 	@GetMapping("student/list")
 	public List<Student> getAllBicycles(){
 		return service.list();
 	}
-	
-	
+
 	@GetMapping("/student/{id}")
 	public Student getOne(@PathVariable(value = "id") long id) {
 		return service.listId(id);

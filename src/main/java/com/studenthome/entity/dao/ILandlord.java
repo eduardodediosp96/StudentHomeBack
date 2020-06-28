@@ -1,9 +1,8 @@
 package com.studenthome.entity.dao;
-import org.springframework.data.repository.CrudRepository;
-import com.studenthome.entity.models.Landlord;
 
+import com.studenthome.entity.models.Landlord;
+import org.springframework.data.repository.CrudRepository;
 
 public interface ILandlord extends CrudRepository<Landlord, Long> {
 
 }
-
