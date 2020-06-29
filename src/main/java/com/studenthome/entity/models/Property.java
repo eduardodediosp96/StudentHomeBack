@@ -22,6 +22,12 @@ private static final long serialVersionUID = 1L;
 	private boolean active;
 	private	String description;
 	private String imageurl;
+	private int cant_shading;
+	private int cant_beds;
+	private int cant_bath;
+	private int score;
+
+
 
 	public long getId()  {
 		return id;
@@ -49,6 +55,30 @@ private static final long serialVersionUID = 1L;
 	public void setDescription(String description) {this.description = description; }
 	public String getImageurl() {return imageurl;}
 	public void setImageurl(String imageurl) {this.imageurl = imageurl; }
+	public int getCant_shading() {
+		return cant_shading;
+	}
+	public void setCant_shading(int cant_shading) {
+		this.cant_shading = cant_shading;
+	}
+	public int getCant_beds() {
+		return cant_beds;
+	}
+	public void setCant_beds(int cant_beds) {
+		this.cant_beds = cant_beds;
+	}
+	public int getCant_bath() {
+		return cant_bath;
+	}
+	public void setCant_bath(int cant_bath) {
+		this.nRoom = cant_bath;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.nRoom = score;
+	}
 
 
 	/*
