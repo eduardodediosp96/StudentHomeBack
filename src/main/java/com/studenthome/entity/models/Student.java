@@ -11,22 +11,17 @@ import javax.persistence.Table;
 @Entity
 @Table(name="student")
 public class Student implements Serializable{
-private static final long serialVersionUID = 1L;
- @Id
- @GeneratedValue(strategy = GenerationType.IDENTITY)
- private long id;
- private String firstName;
- private String lastName;
- private String dni;
- private String phone;
- private String email;
- private double totalScore;	
- private long roomieId;
- private long adressId;
- private String hoobyes; //json preferible
- 
- 
- 	public long getId() {
+	private static final long serialVersionUID = 1L;
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)
+	 private long id;
+	 private String firstName;
+	 private String lastName;
+	 private String dni;
+	 private String phone;
+	 private String email;
+
+	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
@@ -61,30 +56,6 @@ private static final long serialVersionUID = 1L;
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public double getTotalScore() {
-		return totalScore;
-	}
-	public void setTotalScore(double totalScore) {
-		this.totalScore = totalScore;
-	}
-	public long getRommieId() {
-		return roomieId;
-	}
-	public void setRommieId(long roomieId) {
-		this.roomieId = roomieId;
-	}
-	public long getAdressId() {
-		return adressId;
-	}
-	public void setAdressId(long adressId) {
-		this.adressId = adressId;
-	}
-	public String getHoobyes() {
-		return hoobyes;
-	}
-	public void setHoobyes(String hoobyes) {
-		this.hoobyes = hoobyes;
 	}
  
 }
