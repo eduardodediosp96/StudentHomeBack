@@ -112,9 +112,9 @@ private static final long serialVersionUID = 1L;
 	private Location location;
 	//private long locationId;
 
-	@ManyToMany(fetch = FetchType.LAZY,
+	/*@ManyToMany(fetch = FetchType.LAZY,
 			cascade = {CascadeType.PERSIST, CascadeType.MERGE},
 			mappedBy = "properties")
 	@JsonIgnore
-	private List<service> services;
+	private List<Service> Services;*/
 }

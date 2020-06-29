@@ -1,6 +1,8 @@
 package com.studenthome.controllers;
 
 import java.util.List;
+
+import com.studenthome.entity.services.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +19,7 @@ public class propertyController{
 	IPropertyService service;
 	
 	@Autowired
-	com.studenthome.entity.services.IStudentService serv;
+	IStudentService serv;
 	
 	@GetMapping("property/list")
 	public List<Property> getAllPropertys(){

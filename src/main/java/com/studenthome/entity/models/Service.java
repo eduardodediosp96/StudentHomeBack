@@ -4,11 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table(name="service")
-public class service implements Serializable {
+public class Service implements Serializable {
+
     private static final long serialVersionUID=1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,11 +40,11 @@ public class service implements Serializable {
         this.descripcion = descripcion;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY, //solo carga el objeto post
+    /*@ManyToMany(fetch = FetchType.LAZY, //solo carga el objeto post
             cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "service_property",
             joinColumns = {@JoinColumn(name = "service_id")},
             inverseJoinColumns = {@JoinColumn(name = "property_id")})
     @JsonIgnore
-    List<Property> properties;
+    List<Property> properties;*/
 }
