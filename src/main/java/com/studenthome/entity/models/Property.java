@@ -116,5 +116,5 @@ private static final long serialVersionUID = 1L;
 			cascade = {CascadeType.PERSIST, CascadeType.MERGE},
 			mappedBy = "properties")
 	@JsonIgnore
-	private List<Service> services;
+	private List<service> services;
 }

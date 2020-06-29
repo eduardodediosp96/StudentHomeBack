@@ -6,7 +6,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-public class Service implements Serializable {
+@Entity
+@Table(name="service")
+public class service implements Serializable {
     private static final long serialVersionUID=1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
