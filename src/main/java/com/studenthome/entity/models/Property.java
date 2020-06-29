@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -110,4 +111,10 @@ private static final long serialVersionUID = 1L;
 	@JsonIgnore
 	private Location location;
 	//private long locationId;
+
+	@ManyToMany(fetch = FetchType.LAZY,
+			cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+			mappedBy = "properties")
+	@JsonIgnore
+	private List<Service> services;
 }
