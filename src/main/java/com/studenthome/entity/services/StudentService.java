@@ -48,7 +48,9 @@ public class StudentService implements IStudentService {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
 
+	@Override
+	public Student buscarPorEmail(String email, String password) {
+		return data.buscarPorEmail(email, password);
+	}
 }

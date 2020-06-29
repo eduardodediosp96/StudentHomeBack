@@ -12,4 +12,5 @@ public interface IStudentService {
 	public void post(Student s);
 	public void put(Student s, long id);
 	public void delete(long id);
+	public Student buscarPorEmail(String email, String password);
 }
