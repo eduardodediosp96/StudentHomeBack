@@ -1,9 +1,5 @@
 package com.studenthome.entity.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,7 +10,7 @@ public class Landlord implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String firstName;
+   
     private String lastName;
     private String dni;
     private String phone;
@@ -27,12 +23,8 @@ public class Landlord implements Serializable {
     public void setId(long id) {
         this.id = id;
     }
-    public String firstName() {
-        return firstName;
-    }
-    public void firstName(String firstName) {
-        this.firstName = firstName;
-    }
+  
+  
     public String getlastName() {
         return lastName;
     }
@@ -52,21 +44,5 @@ public class Landlord implements Serializable {
     public String getPassword() {return password;}
     public void setPassword(String password) {this.password = password; }
 
-    /*
-    public long getSuscriptionId() {
-        return suscriptionId;
-    }
-    public void setAdressId(long suscriptionId) {
-        this.suscriptionId = suscriptionId;
-    }
-    */
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "suscription_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private Suscription suscription;
-
-    //private long suscriptionId;
 
 }
